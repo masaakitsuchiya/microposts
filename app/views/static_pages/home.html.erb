@@ -11,6 +11,9 @@
     <div class ="col-md-8">
       <h3>Microposts Feed</h3>
       <%= render 'shared/feed' %>
+      <%= paginate @feed_items %>
+      </br>
+      <%= page_entries_info(@feed_items) %>
     </div>
   </div>
 <% else %>
