@@ -1,0 +1,17 @@
+<h1><%= @user.name %>'s follower list</h1>
+
+<div class="container">
+    <% @follows.each do |user| %>
+        <div class= "col-md-6">
+            <table class="follws_and_followers">
+              <tr>
+                <td rowspan="2"><%= gravatar_for (user) %></td>
+                <td><%= link_to user.name, user %></td>
+              </tr>
+              <tr>
+                <td><%= user.profile %></td>
+              </tr>
+            </table>
+        </div>
+    <% end %>
+</div>
